@@ -49,10 +49,10 @@ public class Book implements Parcelable {
     }
 
     @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.title);
-        dest.writeString(this.author);
-        dest.writeString(this.url);
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(this.title);
+        parcel.writeString(this.author);
+        parcel.writeString(this.url);
     }
 
     protected Book(Parcel in) {

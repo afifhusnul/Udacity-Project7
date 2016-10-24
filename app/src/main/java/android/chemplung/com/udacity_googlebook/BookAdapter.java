@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -15,7 +17,7 @@ import java.util.List;
 
 public class BookAdapter extends ArrayAdapter<Book>  {
 
-
+    private Collection<? extends Book> mBookList;
 
     public BookAdapter(Context context, List<Book> books) {
         super(context, 0, books);
@@ -38,5 +40,9 @@ public class BookAdapter extends ArrayAdapter<Book>  {
         authorTextView.setText(currentBook.getAuthor());
 
         return listItemView;
+    }
+
+    public ArrayList<Book> getBookList() {
+        return (ArrayList<Book>) mBookList;
     }
 }

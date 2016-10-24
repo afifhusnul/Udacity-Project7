@@ -40,7 +40,7 @@ public final class QueryUtils {
      * Query the Google Books dataset and return a list of {@link Book} objects.
      */
     public static List<Book> fetchBookData(String requestUrl) {
-        Log.i(LOG_TAG, "Info: fetchBookData called... ");
+        Log.i(LOG_TAG, "Info: fetchBookData called... "+requestUrl);
         // Create URL object
         URL url = createUrl(requestUrl);
 
